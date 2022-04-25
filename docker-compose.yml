@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:  
+  octopus-energy-monitor:
+    image: octopusenergy-consumption-metrics:latest
+    environment:
+      - OCTO_API_KEY="sk_live_HKLVQgdLUeNIlTF7mbhhlHDB"
+      - OCTO_ELECTRIC_MPAN="2700005379925"
+      - OCTO_ELECTRIC_SN="20L3649045"
+      - OCTO_GAS_MPRN="7669869802"
+      - OCTO_GAS_SN="E6S19082822061"
+      - OCTO_GAS_COST=4.25
+      - OCTO_ELECTRIC_COST=20.07
+      - INFLUXDB_URL="https://eu-central-1-1.aws.cloud2.influxdata.com"
+      - INFLUXDB_TOKEN="2djGcILVFuxGhQmB4ZZ0flHkkHl6m8SNbZiGCtt8ALBYM3kKAMdYIMi_fQ_g7prMDSRhuObz52XYNQOtkhwatg=="
+      - INFLUXDB_ORG="cd62d5c3ea1834b3"
+      - INFLUXDB_BUCKET="octopus"
+      - LOOP_TIME=600
+      - PAGE_SIZE=100
